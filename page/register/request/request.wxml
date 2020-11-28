@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<!--<loading hidden="{{!loading}}">
+	{{title}}
+</loading>-->
+<view class="container">
+<scroll-view  scroll-y="true"  class="page-body" bindscrolltolower="loadMore"  style="height:100%">
+  <!--banner-->
+  <view class="swiper">
+    <swiper class='lundo' indicator-dots='true' circular='true'  autoplay='true' mode='aspectFit' interval='3000' style='width:100%; ' mode='widthFix'
+   previous-margin="{{preMargin}}px" next-margin="{{nextMargin}}px" 
+ >
+  <swiper-item><image src='/image/timg.jpg' mode='widthFix'></image></swiper-item>
+  <swiper-item><image src='/image/sw3.jpg' mode='widthFix'></image></swiper-item>
+  <swiper-item><image src='/image/sw2.jpg' mode='widthFix'></image></swiper-item>
+ </swiper>
+  </view>
+  <!--nav-->
+  <view class="nav_top">
+    <block wx:for="{{navTopItems}}" wx:key="item.id">
+      <view class="nav_top_items {{curNavId == item.id ? 'active_'+colors[index] : ''}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
+        <image src="{{item.icon}}" mode="aspectFill"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!--list-->
+  <view class="nav_section">
+    <view wx:if="{{list[curIndex]}}">
+        <block wx:for="{{list[curIndex]}}" wx:key="item.id">
+            <view class="nav_section_items" >
+                <!--image-->
+                <view class="section_image" bindtap="navigateDetail" data-aid="{{item.id}}">
+                <block wx:if="{{item.coverpath}}">
+                    <image src="{{item.coverpath}}" mode="aspectFill"></image>
+                </block>
+                <block wx:else>
+                    <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                </block>
+                </view>
+                <!--content-->
+                <view class="section_cont" bindtap="navigateDetail" data-aid="{{item.id}}">
+                    <view class="section_cont_sub">
+                        <text>{{item.subject}}</text>
+                    </view>
+                    <view class="section_cont_price">时间：{{item.price}}</view>
+                    <view>{{item.message}}</view>
+                </view>
+                <!--book-->
+                <view class="section_book" bindtap="bookTap" data-aid="{{item.id}}">
+                        <text>预定</text>
+                </view>
+            </view>
+            
+        </block>
+    </view>
+    
+    <view wx:else>暂无数据</view>
+
+</view>
+
+</scroll-view>
+</view>

@@ -1,0 +1,64 @@
+{
+  "cloud": true,
+  "pages": [
+    "page/tabbar/info/info",
+    "page/tabbar/mask/mask",
+    "page/tabbar/shop/shop",
+    "page/tabbar/personal/personal"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序检测您是否在教学范围内"
+    }
+  },
+  "subPackages": [
+    {
+      "root": "page/register/",
+      "pages": [
+        "form/form",
+        "list/list",
+        "release/release",
+        "request/request"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "课程签到系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/tabbar/info/info",
+        "text": "疫情实况",
+        "iconPath": "image/gen.png",
+        "selectedIconPath": "image/gen.png"
+      },
+      {
+        "pagePath": "page/tabbar/mask/mask",
+        "text": "口罩资源",
+        "iconPath": "image/mask.png",
+        "selectedIconPath": "image/mask.png"
+      },
+      {
+        "pagePath": "page/tabbar/shop/shop",
+        "text": "互帮互助",
+        "iconPath": "image/shop.png",
+        "selectedIconPath": "image/shop.png"
+      },
+      {
+        "pagePath": "page/tabbar/personal/personal",
+        "text": "个人信息",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

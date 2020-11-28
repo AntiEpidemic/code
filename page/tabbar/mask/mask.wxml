@@ -1,0 +1,60 @@
+<view class='map'><image src='/image/pharmacy.jpg'></image> </view>
+<view class='container'>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <view class='nearCard-fr'>
+        <view>泰圣堂药房(南大合园店)：</view>
+        <view>口罩剩余：
+          <text class='c-green'>1200</text>
+        </view>
+        <view>距您距离：
+          <text class='c-green'>1.0公里</text>
+        </view>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <view class='nearCard-fr'>
+        <view>先声再康药店(高科荣境店)：</view>
+        <view>口罩剩余：
+          <text class='c-green'>200</text>
+        </view>
+        <view>距您距离：
+          <text class='c-green'>1.8公里</text>
+        </view>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <view class='nearCard-fr'>
+        <view>海王星辰健康药房(守敬路店)：</view>
+        <view>口罩剩余：
+          <text class='c-green'>2200</text>
+        </view>
+        <view>距您距离：
+          <text class='c-green'>2.3公里</text>
+        </view>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <view class='nearCard-fr'>
+        <view>华威医药：</view>
+        <view>口罩剩余：
+          <text class='c-green'>700</text>
+        </view>
+        <view>距您距离：
+          <text class='c-green'>2.4公里</text>
+        </view>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <view class='nearCard-fr'>
+        <view>南京人民药店(第七十三分店)：</view>
+        <view>口罩剩余：
+          <text class='c-green'>800</text>
+        </view>
+        <view>距您距离：
+          <text class='c-green'>3.8公里</text>
+        </view>
+      </view>
+    </view>
+</view>
+    
+ 

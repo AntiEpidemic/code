@@ -1,0 +1,45 @@
+<!--pages/plan/plan.wxml-->
+<view class="page-body">
+  <form bindsubmit='openLocation' bindreset="formReset" report-submit='true' class='form-view'>
+
+  <view class="page-section">
+    <view class="weui-cells__title">姓名：</view>
+    <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+        <input class="weui-input" name="input" placeholder="{{username}}"  bindinput='inputchange2' value="{{username}}"></input>
+       </view>
+     </view>
+   </view>
+ 
+
+    <view class="weui-cells__title">学号：</view>
+    <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+    <input class='weui-input' name="input" placeholder="{{usernum}}" maxlength="11" bindinput='inputchange1'  value="{{usernum}}" />
+     </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">签到开始时间：</view>
+    <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+       <view class="weui-cell weui-cell_input">
+        <view class='weui-input' name="input"   >{{register_date}}</view>
+     </view>
+    </view>
+  </view>
+
+<view class="page-body-buttons">
+<button class="page-body-button"  plain="true" loading="{{loading}}" type="primary" bindtap="register" hover-class="ui-share-hover">点击签到</button>
+</view>
+
+
+  <view class='weui-cells__title'>注意：</view>
+  <view class='weui-cells__title'>1.下拉页面或者重新扫描二维码刷新签到开始时间.</view>
+  <view class='weui-cells__title'>2.微信号与姓名学号绑定，同一微信号每次签到仅有一次签到机会。</view>
+  <view class='weui-cells__title2'>3.请在小程序码公布后尽快完成签到，有效时间为三分钟。</view>
+   <view class='weui-cells__title2'>4.第一次签到即为注册，请认真检查学号、姓名！本学期的成绩汇总将以第一次记录的学号、姓名、微信号为准。</view>
+  <view class="explain" >{{res_text}}</view>
+
+ </form>
+ </view>

@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<block wx:if="{{dataReady}}">
+ <view class="bg"  style="opacity:{{0.93}}">
+    <image class="bg-image" mode="scaleToFill"></image>
+  </view>
+
+ <view class='type1'>   
+<swiper class='lundo' indicator-dots='true' circular='true'  autoplay='true' mode='aspectFit' interval='3000' style='width:100%; ' mode='widthFix'
+   previous-margin="{{preMargin}}px" next-margin="{{nextMargin}}px" 
+ >
+  <swiper-item><image src='/image/timg.jpg' mode='widthFix'></image></swiper-item>
+  <swiper-item><image src='/image/sw3.jpg' mode='widthFix'></image></swiper-item>
+  <swiper-item><image src='/image/sw2.jpg' mode='widthFix'></image></swiper-item>
+ </swiper>
+ </view>
+
+   <view class='adduserorder'>
+ <button bindtap='release' border='none' class='bkc2'>
+  <image mode='aspectFill' src='/image/icon4.png'  class='image'></image>
+   <text class='buttonword'> {{buttonText1}} </text>
+  </button>
+  <button bindtap='request' border='none' class='bkc3'>
+  <image mode='aspectFill' src='/image/icon2.png'  class='image'></image>
+   <text class='buttonword'> {{buttonText2}} </text>
+  </button>
+ </view>
+
+</block>
+
+
+    
+ 

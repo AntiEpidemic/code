@@ -1,0 +1,19 @@
+
+<view class='container'>
+  <block wx:for-items="{{list}}" wx:key="{{_id}}">
+    <view class='card  b-shadow' bindtap='toggleBtn' id="{{item.id}}">
+      <view class='nearCard-fr'>
+        <view>姓名：
+          <text class='c-green'>{{item.name}}</text>
+        </view>
+        <view>学号：
+          <text class='c-green'>{{item.num}}</text>
+        </view>
+         <view>签到成功次数：
+          <text class='c-green'>{{item.checkin}}</text>
+        </view>
+
+      </view>
+    </view>
+  </block>
+</view>

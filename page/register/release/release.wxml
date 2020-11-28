@@ -1,0 +1,76 @@
+<view class='bg'></view>
+
+<view class='horizon firstrow'>
+  <input class='input' bindinput='nameInput' placeholder='请输入您的姓名'></input>
+</view>
+
+<view class='line'></view>
+<view class="horizon firstrow">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{aray}}" name="data_province" >
+            <view> {{array[index]}}</view>
+        </picker>
+</view>
+
+
+<view class='line'></view>
+<view class="weui-cells__title">服务时间</view>
+    <view class="ar_cont">
+  <view class="ar_date_time">
+      <view class="ar_date">
+          <image src="../../../image/date.png"></image>
+          <picker mode="date" placeholder="选择日期" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" >
+              <view>
+                  {{date}}
+              </view>
+          </picker>
+      </view>
+      <view class="ar_time">
+          <image src="../../../image/time.png"></image>
+          <picker mode="time" placeholder="选择时间" value="{{time}}" start="01:00" end="24:00" bindchange="bindTimeChange">
+              <view>
+                  {{time}}
+              </view>
+          </picker>
+      </view>
+  </view>
+</view>
+
+
+
+<view class='line'></view>
+<view class='horizon firstrow'>
+
+  <input class='input' bindinput='teleInput' placeholder='备注内容'></input>
+</view>
+<view class='line'></view>
+<view class='horizon firstrow'>
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  地点：{{region[0]}}，{{region[1]}}，{{region[2]}}
+  </picker>
+</view>
+<view class='line'></view>
+<view class='horizon firstrow'>
+
+  <input class='input' bindinput='teleInput' placeholder='请输入您的手机号'></input>
+</view>
+
+<view class='line'></view>
+
+
+
+
+<view class='horizon firstrow'>
+
+  <input class='input' bindinput='vertifyCodeInput' placeholder='请输入验证码'></input>
+  <button class='button' disabled="{{disabled}}" bindtap='tapSendVertifyCode'>{{time}}</button>
+</view>
+
+<view class='bg'></view>
+
+<button class='sureBtn' type='primary' bindtap='sureTap'>确定</button>
+
+
+
+
+  
+

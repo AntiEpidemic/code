@@ -1,0 +1,68 @@
+<template name="loads">
+    <loading hidden="{{hid}}">
+        加载中...
+    </loading>
+</template>
+<view class="menu">
+    <scroll-view class="scroll-view_H" scroll-x="true" >
+        <view id="{{menu_id}}" bindtap="click_menu" wx:for="{{menu}}" wx:for-index="menu_id" wx:for-item="item" class="nav_font">
+            <block wx:if="{{menu_id == menuStatic}}"><text class="nav_hover">{{item}}</text>
+            </block>
+            <block wx:else>{{item}}</block>
+        </view> 
+    </scroll-view>
+</view>
+<block wx:if="{{menuStatic == 0}}">
+  <view class="imageContainer" >
+      <image class="imageshow" src="/image/guonei.png"></image>
+      <image class="imageshow_" src="/image/guonei_.png"></image>
+      <image class="imageshow__" src="/image/guonei__.png"></image>
+  </view>
+  <view class='card  b-shadow' bindtap='toggleBtn'>
+    <text class="text_time">2020年11月26日 12:15</text>
+      <view class='nearCard-fr'>
+        <text>转扩！天津涉疫情冷冻牛肉流入山西，急寻密接者！
+          <text>据陕西省安康市卫健委:25日，宁陕县发布紧急通告称，天津涉事猪肉......</text>
+        </text>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <text class="text_time">2020年11月26日 11:37</text>
+      <view class='nearCard-fr'>
+        <text>致敬！重症专家邱海波说病人在哪我就在哪
+          <text>11月26日，江苏省抗击新冠肺炎疫情表彰大会举行。重症专家邱海波......</text>
+        </text>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <text class="text_time">2020年11月26日 10:12</text>
+      <view class='nearCard-fr'>
+        <text>内蒙古满洲里新增9例本土确诊，其中2例为无症状感染者转确诊
+          <text>11月25日7时至11月26日7时，内蒙古自治区报告满洲里市新增本土确诊......</text>
+        </text>
+      </view>
+    </view>
+</block>
+<block wx:else>
+  <view class="imageContainer" >
+      <image class="imageshow_data" src="/image/guowai.png"></image>
+      <image class="imageshow_" src="/image/guowai_.png"></image>
+      <image class="imageshow__" src="/image/guowai__.png"></image>
+  </view>
+  <view class='card  b-shadow' bindtap='toggleBtn'>
+    <text class="text_time">2020年11月26日 7:41</text>
+      <view class='nearCard-fr'>
+        <text>平均每40秒美国就有一人死于新冠
+          <text>美国约翰霍普金斯大学数据显示，24日，美国新增新冠肺炎确诊病例......</text>
+        </text>
+      </view>
+    </view>
+    <view class='card  b-shadow' bindtap='toggleBtn'>
+      <text class="text_time">2020年11月26日 06:03</text>
+      <view class='nearCard-fr'>
+        <text>美国新冠肺炎超1272万例
+          <text>美国约翰霍普金斯大学数据显示，截至美东时间11月25日16时45分......</text>
+        </text>
+      </view>
+    </view>
+</block>

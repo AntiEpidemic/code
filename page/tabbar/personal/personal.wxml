@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<block wx:if="{{dataReady}}">
+
+<view class="top">
+  <view class='title'>
+    <image class="title_img" src="{{icon_src}}"></image>
+    <picker bindchange="bindPickerChange" mode='selector' value="{{index}}" range="{{array}}" class="picker_sty">
+      <view>{{array[index]}}</view>
+    </picker>
+  
+  </view>
+  <view>
+    <text class="title_txt">姓名：姜少魁\n </text>
+    <text class="title_txt">身份证号：140223****1013\n</text>
+    <text class="title_txt">更新于：2020年11月25日\n</text>
+  </view>
+</view>
+<view class="health_pic">
+    <image src="{{pic_src}}"></image>
+</view>
+<view class="bottom">
+  <text class="title_txt">您于14天内到达或者途经：</text>
+  <text class="position_txt">江苏省南京市</text>
+</view>
+<view class="bottom2">
+  <button class="btn_sty" bindtap="more">查看更多</button>
+  <button class="btn_sty" bindtap="share">点击分享</button>
+</view>
+
+  
+</block>
+
+
+    
+ 
